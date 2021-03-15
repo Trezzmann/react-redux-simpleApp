@@ -1,12 +1,12 @@
 import Button from './Button'
 import React from 'react'
 
-const Header = ({title}) => {
-    const onClink = (e) => console.log(e.target) 
+const Header = ({title, onAdd, showAdd}) => {
+    
     return (
         <div className="header">
             <h1>{title}</h1>
-            <Button text="Add" handleClick={onClink}/>
+            <Button text={showAdd ? 'Close':'Add'} color={showAdd ? 'red':'green'} handleClick={onAdd}/>
         </div>
     )
 }
